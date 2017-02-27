@@ -58,7 +58,7 @@ Array
         )
         ...
 ```
-#### plugSwitch _(bool, array)_
+#### plugSwitch _(bool, Array)_
 Send command to plug, true / false, and deviceId in array
 
 ## License

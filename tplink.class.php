@@ -112,8 +112,8 @@ class TpLink {
 	}
 	
 	public function plugSwitch($bool, $device) {
-		$switchData = array("method" => "passthrough", "params" => array("deviceId" => $device['deviceId'], "requestData" => '{"system":{"set_relay_state":{"state":"'.(($bool)?1:0).'"}}}'));
-		$response = get((($device['useUrl'])?$device['useUrl']:'https://use1-wap.tplinkcloud.com')."/?token=".$this->returnToken()."&appName=Kasa_iOS&termID=".$this->myTerminal()."&ospf=iOS%2010.2.1&appVer=1.4.3.390&netType=wifi&locale=es_AR", $switchData, "POST", "json")['result']['deviceList'];
+		$switchData = array("method" => "passthrough", "params" => array("deviceId" => "".$device['deviceId']."", "requestData" => '{"system":{"set_relay_state":{"state":'.(($bool)?1:0).'}}}'));
+		$response = get((($device['useUrl'])?$device['useUrl']:'https://use1-wap.tplinkcloud.com')."/?token=".$this->returnToken()."&appName=Kasa_iOS&termID=".$this->myTerminal()."&ospf=iOS%2010.2.1&appVer=1.4.3.390&netType=wifi&locale=es_AR", $switchData, "POST", "json");
 	}
 	
 }

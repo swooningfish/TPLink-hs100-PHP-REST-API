@@ -16,10 +16,10 @@ $tplink = new TpLink();
 $plugs = $tplink->getDeviceList();
 
 /* Set on first plug */
-$tplink->plugSwitch(true, array() {    // bool, default false
+$tplink->plugSwitch(true, array(    // bool, default false
 	"deviceId" => $plugs[0]['deviceId'], // deviceId, default none
 	"useUrl" => $plugs[0]['useUrl']      // optional specify appServerUrl (Previously provided)
-});	
+));	
 ```
 
 ### Commands
